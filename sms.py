@@ -18,8 +18,11 @@ def convert_to_e164(raw_phone):
     return phonenumbers.format_number(phone_representation, phonenumbers.PhoneNumberFormat.E164)
 
 def send_sms(to, body):
+    if len(account_sid) == 0 or len(auth_token) == 0 or len(sender_number) == 0:
+        return
     to = convert_to_e164(to)
     client = TwilioRestClient(account_sid, auth_token)
     message = client.messages.create(body=body,
         to=to,
         from_=sender_number)
+    return
