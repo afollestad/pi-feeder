@@ -65,3 +65,10 @@ $ python3 server.py
 This will run the HTTP server, create a default admin account, and do any other required initial setup.
 
 The default admin credentials are `admin` / `feeder`.
+
+---
+
+# (Optional) SMS Notifications
+
+You can receive SMS notifications when the feeder runs (not from manual activation, but from automatic schedule activation). You just need a 
+[Twilio account](https://www.twilio.com), where you can copy and paste your account SID, auth token, and sender number into `sms.py`.  
