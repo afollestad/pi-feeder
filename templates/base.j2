@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/materialize.clockpicker.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.timepicker.css') }}" />
+    <title>Pi Feeder Dashboard</title>
+    <meta name="theme-color" content="#546E7A">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    {% endblock %}
+</head>
+<body>
+    <div id="modal" class="modal">
+    </div>
+
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="/settings">Settings</a></li>
+        <li class="divider"></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+            {% if show_menu %}
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="slide-out" class="side-nav">
+                {% if not show_activate_now %}
+                <li><a href="about:exit">Back to App</a></li>
+                {% endif %}
+                <li><a href="/settings">Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+            {% endif %}
+            <a href="/" class="brand-logo">Dashboard</a>
+            {% if show_menu %}
+            <ul class="right">
+                {% if show_refresh %}
+                <li><a id="refresh"><i class="material-icons">refresh</i></a></li>
+                {% endif %}
+                <li><a class="dropdown-button hide-on-med-and-down" href="#!" data-activates="dropdown1">More<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.timepicker.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/networking.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/materialize.clockpicker.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.modal').modal();
+            $(".button-collapse").sideNav({
+                menuWidth: 240
+            });
+        });
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

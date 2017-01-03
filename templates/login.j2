@@ -1,0 +1,25 @@
+{% extends "base.j2" %}
+{% block content %}
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+    <form action="/login" method="post">
+        <div class="row" style="margin-top: 12px">
+            <div class="input-field col s12 m6">
+                <input id="username" name="username" type="text">
+                <label for="username">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="password" name="password" type="password">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <button type="submit" class="waves-effect waves-light btn" style="width: 100%">Login</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

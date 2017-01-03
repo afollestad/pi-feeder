@@ -1,0 +1,24 @@
+<div class="modal-content">
+    <h5>Add One-Time Occurrence</h5>
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+    <form action="/add_onetime_occurrence" method="post">
+        <div class="row" style="margin-top: 32px; margin-bottom: 16">
+            <div class="input-field col s12">
+                <input id="date" name="date" type="date" class="datepicker">
+                <label for="date">Date</label>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0">
+            <div class="input-field col s12">
+                <input id="time" name="time" type="time" class="timepicker">
+                <label for="time">Time</label>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <a id="modal-submit" class="modal-action waves-effect waves-blue-grey btn-flat">Add Occurrence</a>
+</div>
+<script src="{{ url_for('static', filename='js/onetimemodal.js') }}"></script>

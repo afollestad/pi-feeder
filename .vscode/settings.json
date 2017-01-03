@@ -1,0 +1,28 @@
+{
+    "deploy": {
+        "packages": [
+            {
+                "name": "Pi",
+                "description": "Deployment to Raspberri Pi.",
+                "files": [
+                    "*.py"
+                ],
+                "exclude": [
+                    "tests/**"
+                ]
+            }
+        ],
+        "targets": [
+            {
+                "type": "ftp",
+                "name": "Pi",
+                "description": "Deployment to Raspberri Pi.",
+                "dir": "/home/pi/pitest",
+                "host": "192.168.86.26", "port": 21,
+                "user": "pi", "password": "Waverly1223!"
+            }
+        ]
+    }
+,
+"python.linting.pylintEnabled": false
+}

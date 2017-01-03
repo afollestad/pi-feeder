@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.nav-wrapper {
+    background-color: #546E7A !important;
+}
+
+#content {
+    padding: 2% 3%;
+    width: 100%;
+    height: 100%;
+}
+
+#countdown {
+    margin-top: 16px;
+}
+
+.brand-logo {
+    margin-left: 3.2%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    #content {
+        padding: 16px;
+    }
+
+    .brand-logo {
+        margin-left: 0;
+    }
+
+    .ui-timepicker-list li {
+        height: 42px !important;
+        line-height: 39px !important;
+    }
+
+    hr {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+.input-field,
+.row .col.s6 {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.row .col {
+    padding-left: 0 !important;
+}
+
+.input-field.col label.active {
+    left: 0;
+}
+
+.error {
+    color: #E53935;
+    margin-bottom: 24px;
+}
+
+.remove-recurrence,
+.remove-occurrence {
+    cursor: pointer;
+    font-size: 18px;
+    color: #E53935;
+}
+
+.no-top-spacing {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h4 {
+    margin-bottom: 32px;
+}
+
+h4,
+h5 {
+    color: rgba(0, 0, 0, 1.0);
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#add-onetime-occurrence {
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+.modal-action, a, .dropdown-content li>a, .dropdown-content li>span {
+    color: #00BCD4;
+}
+
+.btn, .btn-large {
+    background-color: #00BCD4;
+}
+
+.btn:hover, .btn-large:hover {
+    background-color: #4DD0E1;
+}
+
+.btn:active, .btn-large:active {
+    background-color: #00ACC1;
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]) {
+    border-bottom: 1px solid #00BCD4;
+    box-shadow: 0 1px 0 0 #00BCD4;
+}
+
+input[type=text]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label {
+    color: #00BCD4;
+}
+
+.picker__date-display {
+    background-color: #00BCD4 !important;
+}
+
+.picker__weekday-display {
+    background-color: #00ACC1 !important;
+}
+
+.picker__close, .picker__today, .picker__day.picker__day--today {
+    color: #00BCD4;
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+    background-color: #00BCD4 !important;
+}
+
+.btn-floating.btn-flat.active {
+    background-color: rgba(0, 188, 212, 0.25);
+}
+
+.clockpicker-canvas-bg {
+    fill: rgba(0, 188, 212, 0.25);
+}
+
+nav .brand-logo {
+    font-size: 1.4rem !important;
+    left: initial !important;
+    -webkit-transform: initial !important;
+    transform: inherit !important;
+}
+
+.side-nav {
+    padding-top: 16px;
+}

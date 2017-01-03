@@ -1,0 +1,47 @@
+{% extends "base.j2" %}
+
+{% block content %}
+
+    {% if show_activate_now %}
+    <button id="activate" class="waves-effect waves-light btn">Activate Now</button>
+    {% endif %}
+    <p id="countdown">Loading...</p>
+
+    <hr/>
+
+    <h5>Recurrence Schedule</h5>
+    <table class="responsive-table striped">
+        <thead>
+            <tr>
+                <th data-field="sunday">Sun</th>
+                <th data-field="monday">Mon</th>
+                <th data-field="tuesday">Tue</th>
+                <th data-field="wednesday">Wed</th>
+                <th data-field="thursday">Thu</th>
+                <th data-field="friday">Fri</th>
+                <th data-field="saturday">Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="add-recurrence-row">
+                <td><a id="add-recurrence-sunday" class="add-recurrence" dayid="6">Add Recurrence...</a></td>
+                <td><a id="add-recurrence-monday" class="add-recurrence" dayid="0">Add Recurrence...</a></td>
+                <td><a id="add-recurrence-tuesday" class="add-recurrence" dayid="1">Add Recurrence...</a></td>
+                <td><a id="add-recurrence-wednesday" class="add-recurrence" dayid="2">Add Recurrence...</a></td>
+                <td><a id="add-recurrence-thursday" class="add-recurrence" dayid="3">Add Recurrence...</a></td>
+                <td><a id="add-recurrence-friday" class="add-recurrence" dayid="4">Add Recurrence...</a></td>
+                <td><a id="add-recurrence-saturday" class="add-recurrence" dayid="5">Add Recurrence...</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr/>
+    <h5 style="margin-bottom: 16px">One-Time Schedule</h5>
+    <table class="responsive-table striped" id="onetimes">
+    </table>
+    <p><a id="add-onetime-occurrence">Add One-Time Occurrence...</a></p>
+
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/schedule.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.j2" %}
+{% block content %}
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% endif %}
+    <h4>Change Password</h4>
+    <form action="/settings" method="post">
+        <div class="row" style="margin-top: 12px">
+            <div class="input-field col s12 m6">
+                <input id="current_password" name="current_password" type="password">
+                <label for="current_password">Current Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="new_password" name="new_password" type="password">
+                <label for="new_password">New Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input id="confirm_password" name="confirm_password" type="password">
+                <label for="confirm_password">Confirm Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m6">
+                <input type="submit" class="waves-effect waves-light btn" style="width: 100%">
+            </div>
+        </div>
+    </form>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/schedule.js') }}"></script>
+{% endblock %}
