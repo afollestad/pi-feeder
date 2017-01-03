@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
 .nav-wrapper {
     background-color: #546E7A !important;
 }
@@ -30,7 +28,15 @@ hr {
     padding: 0;
 }
 
+.top-margin-mobile {
+    margin-top: 0;
+}
+
 @media screen and (max-width: 600px) {
+    .top-margin-mobile {
+        margin-top: 16px;
+    }
+
     #content {
         padding: 16px;
     }
@@ -91,7 +97,6 @@ h5 {
     padding-bottom: 0;
     margin-top: 0;
     padding-top: 0;
-    font-family: 'Roboto Mono', monospace;
 }
 
 p {
